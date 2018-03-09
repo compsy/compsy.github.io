@@ -2,28 +2,53 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <script src="javascripts/main.js"></script>
+  <title></title>
   <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W7X8HCK');</script>
-<!-- End Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W7X8HCK');
+  </script>
+  <!-- End Google Tag Manager -->
   <style>
     img {
-      position: absolute;
-      top: 50%;
+      position: relative;
       left: 50%;
       width: 625px;
       height: 625px;
-      margin-top: -312px;
       /* Half the height */
       margin-left: -312px;
       /* Half the width */
     }
-    
+
     body {
       background: #3d7cad;
+    }
+
+    .collapsible-body {
+      background: #fff;
     }
   </style>
 
@@ -31,10 +56,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <body>
   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7X8HCK"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7X8HCK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- End Google Tag Manager (noscript) -->
   <img src="images/compsy_sep.png" alt="" height=625 />
+
+  <div id="main" class="container">
+    <h3 class="white-text center">Available student projects</h3>
+    <div id="content">
+      <div class="row white-text center">
+        Currently no projects available...
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

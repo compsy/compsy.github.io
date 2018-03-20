@@ -16,6 +16,12 @@ $(document).ready(function() {
   })
 })
 
+function convert(text) {
+  var converter = new showdown.Converter();
+  var html = converter.makeHtml(text);
+  return html;
+}
+
 function createFinalOutput(entries) {
   return '<ul class="collapsible popout" data-collapsible="accordion">' + entries + '</ul>'
 }
@@ -24,7 +30,7 @@ function createEntry(entry) {
   var returnVal = '<li>';
   returnVal += '<div class="collapsible-header"><i class="large material-icons">assignment</i>' + entry.title + '</div>'
   returnVal += '<div class="collapsible-body">'
-  returnVal += '<span>' + entry.body + '</span>'
+  returnVal += '<span>' + convert(entry.body) + '</span>'
   returnVal += '<p>Contact: <a href="' + entry.user.html_url + '">' + entry.user.login + '</a></p>'
   returnVal += '</div>'
   returnVal += '</li>';
